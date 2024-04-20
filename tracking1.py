@@ -40,7 +40,7 @@ class TrackingApp:
 
     def load_data(self):
         try:
-            client = pymongo.MongoClient("mongodb://localhost:27017")
+            client = pymongo.MongoClient("")
             db = client['users']
             collection = db['bus']
 
@@ -91,7 +91,7 @@ class tracking2:
         text_widget.place(x=100, y=100)
         
         # Connect to MongoDB and retrieve bus numbers
-        client = pymongo.MongoClient("mongodb://localhost:27017")
+        client = pymongo.MongoClient("")
         db = client['users']
         collection = db['bus']
         my_docs = collection.find({"route": bus_stop}, {"busno": 1, "_id": 0})
