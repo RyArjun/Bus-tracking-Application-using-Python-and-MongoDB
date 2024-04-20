@@ -8,7 +8,7 @@ def login():
     password = password_entry.get()
     
     try:
-        client = pymongo.MongoClient("mongodb://localhost:27017")
+        client = pymongo.MongoClient("")
         db = client['users']  
         collection = db['userdata']  
         
